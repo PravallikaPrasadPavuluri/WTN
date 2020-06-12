@@ -1,8 +1,6 @@
 package com.wipro.FlowControlStatements;
 public class Q10 {
 public static void main(String[] args) {
-	//int month = Integer.parseInt(args[0]);
-	//String month = args[0].charAt(0);
 	if(args.length == 0)
 	{
 		System.out.println("Please enter the month in numbers");
