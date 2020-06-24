@@ -1,60 +1,61 @@
 package com.wipro.Encapsulation;
 class Author
 {
-	String name;
-	String email;
-	char gender;
-	Author()
+	public static String name;
+	public static String email;
+	public static char gender;
+	Author(String na, String em, char gen)
 	{
-		name = "Wipro";
-		email = "Wipro@gmail.com";
-		gender = 'M';
+		name = na;
+		email = em;
+		gender = gen;
 	}
 }
 class Book
 {
-	String name;
+	String name1;
 	String author;
 	double price;
 	int qtyInStock;
-	Author a = new Author();
-	Book()
+	//Author a = new Author();
+	Book(String nam)
 	{
-		name = "Talent";
+		name1 = nam;
 	}
-	void setprice()
+	void setPrice()
 	{
-		price = 100;
+		price = 100.0;
 	}
-	void setqtyInstock()
+	void setQtyInstock()
 	{
 		qtyInStock = 5;
 	}
-	double getprice()
+	double getPrice()
 	{
 		return price;
 	}
-	int getqtyInStock()
+	int getQtyInStock()
 	{
 		return qtyInStock;
 	}
-	String getname()
+	String getName()
 	{
-		return name;
+		return name1;
 	}
 	void getAuthor()
 	{
-		System.out.println("The name of the author is: " + a.name);
-		System.out.println("The emailid of the author is: " + a.email);
-		System.out.println("His gender is: " + a.gender);
+		System.out.println("The name of the author is: " + Author.name);
+		System.out.println("The emailid of the author is: " + Author.email);
+		System.out.println("His gender is: " + Author.gender);
 	}
 }
 public class BookAuthor {
 public static void main(String[] args) {
-	Book book = new Book();
-	System.out.println("The name of the book is: " + book.getname());
-	System.out.println("The price per book is: " + book.getprice());
-	System.out.println("The total quantity of books in the stock is: " + book.getqtyInStock());
+	Book book = new Book("Java");
+	Author auth = new Author("Wipro","wipro@wipro.in",'F');
+	System.out.println("The name of the book is: " + book.getName());
+	System.out.println("The price per book is: " + book.getPrice());
+	System.out.println("The total quantity of books in the stock is: " + book.getQtyInStock());
 	book.getAuthor();
 }
 }
